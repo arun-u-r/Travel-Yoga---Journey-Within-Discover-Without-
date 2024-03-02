@@ -1,0 +1,74 @@
+.darkmode-toggle-container {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px; */
+    /* margin-top: 30px; */
+}
+
+.darkmode-toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.darkmode-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.darkmode-switch.dark {
+    background-color: #555;
+}
+
+.darkmode-switch i {
+    position: absolute;
+    transform: scale(0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.darkmode-switch.dark i.ri-sun-line {
+    color: transparent;
+}
+
+.darkmode-switch i.ri-moon-fill {
+    color: transparent;
+}
+
+.darkmode-switch.dark i.ri-moon-fill {
+    color: #fdd835;
+}
+
+.darkmode-switch:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgba(252, 251, 251, .5);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.darkmode-switch.dark:before {
+    transform: translateX(26px);
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #c71212;
+}

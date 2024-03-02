@@ -1,0 +1,38 @@
+
+
+.service__item {
+    padding: 1rem;
+    border-bottom: 1px solid #08080886;
+    border-right: 1px solid #08080886;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.service__img{
+    padding: 0.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 50px;
+}
+
+.service__img img {
+    width: 100%;
+}
+
+.service__item h5 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.service__item p {
+    font-size: .8rem;
+    color: var(--text-color);
+}
+

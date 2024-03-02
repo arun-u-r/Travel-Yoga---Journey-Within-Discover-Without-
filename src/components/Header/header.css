@@ -1,0 +1,137 @@
+.header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    display: flex; 
+     align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #919c96;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+   
+    
+}
+
+
+.nav__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+   width: 60px;
+   /* padding: 5px; */
+height: 60px;
+}
+
+.menu {
+    margin-bottom: 0;
+
+}
+
+.nav__items a {
+    
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--heading-color);
+ 
+}
+
+.nav__items a:hover{
+    color: inherit ;
+}
+
+.nav__items a.active_link {
+    position: relative;
+    color: red;
+    text-decoration: none; /* Remove default underline */
+}
+
+.nav__items a.active_link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjust the distance of the underline from the text */
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: red;
+    transition: bottom 0.3s ease; /* Add transition effect */
+}
+
+.nav__items a.active_link:hover::after {
+    bottom: -6px; 
+}
+
+.mobile__menu {
+    font-size: 1.1rem;
+    color: var(--heading-color);
+    display: none;
+    cursor: pointer;
+    
+}
+.active__link {
+    color: #ff0000; /* Change color to red for example */
+    font-weight: bold; /* Make the font bold */
+    /* Add any other styles as needed */
+  }
+
+.sticky__header {
+    display: flex;
+    justify-content: space-between;  
+    width: 100%;
+    height: 90px;
+    line-height: 80px;
+    position: sticky;
+    top:0;
+    left: 0;
+    box-shadow: rgba(41, 40, 43, 0.35)0px 10px 10px 0px;
+    z-index: 999; 
+    background: rgba(255, 255, 255, 0.75);
+}
+
+
+
+@media only screen and (max-width: 992px){
+    .logo img{
+        width:80%;
+    }
+    .navigation{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.41);
+        z-index: 999;
+        display: none;
+        
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100%-75%);
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        line-height: 0.5rem;
+        justify-content: center;
+        z-index: 9999;
+    }
+    .mobile__menu {
+        display: block;
+    }
+    .show__menu{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 786px){
+    .logo img {
+        width:60%;
+    }
+    .menu {
+        width: calc(100%-50%);
+    }
+}

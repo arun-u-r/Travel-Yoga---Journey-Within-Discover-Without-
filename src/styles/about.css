@@ -1,0 +1,181 @@
+.main {
+  background-image: url(../assets/images/toursCover.jpg);
+  filter: brightness(90%) contrast(120%) saturate(110%) hue-rotate(10deg) ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+  animation: bounce 1s infinite alternate-reverse;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@media (min-width: 768px) {
+  .card1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 180px 5px 5px 5px;
+  }
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  /* fill: #f3b4e2; */
+  color: #cc39a4;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+  animation: bounce 1s infinite alternate-reverse;
+}
+
+@media (min-width: 768px) {
+  .card2 {
+    width: 180px;
+    height: 180px;
+    border-radius: 5px 180px 5px 5px;
+  }
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  /* color: rgb(31, 30, 30); */
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+  animation: bounce 1s infinite alternate-reverse;
+}
+@media (min-width: 768px) {
+  .card3 {
+    width: 180px;
+    height: 180px;
+    border-radius: 5px 5px 5px 180px;
+  }
+}
+
+.github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+  animation: bounce 1s infinite alternate-reverse;
+}
+@media (min-width: 768px) {
+  .card4 {
+    width: 180px;
+    height: 180px;
+    border-radius: 5px 5px 180px 5px;
+  }
+}
+
+.whatsapp {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+ color: #55B241;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: rgb(10, 10, 10);
+}
+
+.card1:hover .instagram {
+  fill: rgb(10, 10, 10);
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color:rgb(10, 10, 10);
+}
+
+.card2 :hover .twitter {
+  /* fill: rgb(8, 8, 8); */
+  background-color: white;
+
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: rgb(10, 10, 10);
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: rgb(10, 10, 10);
+}
+
+.card4.whatsapp:hover  {
+  fill:white;
+}

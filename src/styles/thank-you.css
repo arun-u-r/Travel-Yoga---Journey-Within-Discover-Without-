@@ -1,0 +1,59 @@
+
+.back__to_home a {
+  text-decoration: none;
+  color: #080404;
+
+}
+
+.back__to_home {
+  display: inline-block;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  background: linear-gradient(45deg, #FF5733, #FFC300); /* Gradient from orange to yellow */
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px; /* Adding a bit of space between letters for style */
+  text-decoration: none;
+  text-transform: uppercase; /* Text will be in uppercase */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden; 
+}
+
+.back__to_home:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px #FFC300, 0 0 20px #FF5733, 0 0 25px #FF5733, 0 0 30px #FFC300, 0 0 35px #FF5733;
+  transition: all 0.7s ease-in-out;
+}
+
+.back__to_home:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back__to_home:hover:before {
+  left: 100%;
+}
+
+.back__to_home:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thank__you span i {
+  font-size:4rem ;
+  color: rgb(0, 128, 0);
+}
+
+.thank__you h1 {
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+}

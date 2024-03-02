@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff7e01;
+  --secondary-color: #2f6611;
+  --heading-color: #0b2727;
+  --text-color: #6e7074;
+  --font-name: "Montserrat", sans-serif;
+  --subtitle-font-name: "Cinzel Decorative", cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}
+
+body.dark-mode a, 
+body.dark-mode p, 
+body.dark-mode h1, 
+body.dark-mode h2  {
+    color: #fff; 
+}
+
+
+body {
+  font-family: var(--font-name);
+  background: linear-gradient(to bottom, #d4e7ee, #fffffb, #fdfcf6, #ffffff);
+  margin: 0;
+}
+
+section {
+  padding: 50px 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+ul {
+  list-style: none;
+}
+
+.primary__btn {
+  /* background: var(--secondary-color) !important; */
+  background: transparent !important;
+
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 0.4rem 1.5rem !important;
+}
+
+.primary__btn a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500 !important;
+}
+.secondary__btn:hover {
+  background: #03f40f;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #03f40f,
+              0 0 25px #03f40f,
+              0 0 50px #03f40f,
+              0 0 100px #03f40f;
+}
+.primary__btn:hover {
+  background: #03f40f;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #06daff,
+              0 0 25px #06daff,
+              0 0 50px #06daff,
+              0 0 100px #06daff;
+}
+.secondary__btn {
+  background: transparent !important;
+  color: #0b2727 !important;
+  border: none !important;
+  font-weight: 500 !important;
+  border-radius: 50px !important;
+  padding: 0.4rem 1.5rem !important;
+
+}
+
+.secondary__btn a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--heading-color);
+}
+
+
+
+.section__subtitle {
+  background: linear-gradient(135deg, #04acf5, #7dbfcf);
+  font-family: var(--subtitle-font-name);
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 4px 10px 10px 4px rgba(41, 42, 54, 0.6);
+  cursor: pointer;
+  animation: jump 1s infinite alternate;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.section__subtitle:hover {
+  background: linear-gradient(135deg, #301c79, #797c7e);
+  color: #fff;
+  transform: translateY(-5px);
+/* animation: none; */
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #181525 #ffffff;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  *::-webkit-scrollbar-track {
+    background: linear-gradient(45deg, #ff6b6b, #6b66ff);  }
+
+  *::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6b6b, #6b66ff);
+    border-radius: 10px;
+    /* border: 3px ridge #2b08a8; */
   }
-}
+  
+  @media only screen and (max-width: 992px){
+    .primary__btn a, .secondary__btn a {
+      font-size: 0.8rem;
+    }
+    .primary__btn, .secondary__btn , .btn-dark{
+      padding: 0.2rem 1.1rem !important;
+    }
+    section{
+      padding: 40px 0;
+    }
+  }
+  @media only screen and (max-width: 768px){
+    .section__subtitle{
+      font-size: 1.3rem;
+
+    }
+  }

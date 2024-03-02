@@ -1,0 +1,170 @@
+.tour__img{
+    transition: transform 0.3s ease;
+}
+.tour__img:hover  {
+    transform: scale(1.01); 
+}
+
+.tour__img img {
+    width:100%;
+    border-radius: 5px 5px 0 0;
+    height: auto;
+    object-fit: cover;
+}
+
+.tour__card {
+    border: none !important;
+    box-shadow: #686666 0px 18px 50px -10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    aspect-ratio: 1/1;
+    
+    
+    
+}
+/* Styles for screens smaller than 576px */
+@media (max-width: 576px) {
+    .tour__title{
+        font-size: 1rem;
+    }
+     .booking__button a{
+        font-size: 0.8rem;
+     }
+     .booking__button {
+        padding:  0.3rem 0.5rem !important;
+     }
+
+    .tour__card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+}
+
+/* Styles for screens between 576px and 767.98px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .tour__card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Styles for screens between 768px and 991.98px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .tour__card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Styles for screens between 992px and 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .tour__card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+    .tour__card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+ 
+
+.tour__img figcaption {
+    position: absolute;
+    font-weight: 500;
+    top: 20px;
+    right: 5px;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
+    padding: 0.2rem 0.4rem;
+    background: rgba(253, 0, 0, 0.87);
+    color: #fff;
+    z-index: 10;
+    animation:  slide 3s alternate infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(-20px); /* Initial position */
+    }
+    100% {
+        transform: translateX(10px); /* bounce slide to the right */
+    }
+}
+
+
+.card__top span i {
+    color: var(--secondary-color);
+}
+ 
+.tour__rating {
+    color: var(--text-color);
+    font-size: 0.7rem;
+}
+
+.tour__location {
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+
+.tour__rating i, .tour__location {
+    font-size: 1rem;
+}
+
+.tour__title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.tour__title a {
+    text-decoration: none;
+    color: var(--heading-color);
+}
+
+.tour__title a:hover {
+    color: var(--secondary-color);
+}
+
+.card__bottom h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.card__bottom h4 span {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.booking__button {
+    background: rgba(12, 3, 133, 0.966) !important;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.booking__button a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.booking__button a:hover {
+    color: #fc0505;
+}
+.tour__location, .tour__rating {
+    font-size: 0.8rem;
+}
